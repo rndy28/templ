@@ -1,0 +1,18 @@
+{
+  "name": "templ",
+  "version": "0.0.1",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:linaria": "yarn workspace @templ/linaria dev",
+    "dev:tailwindcss": "yarn workspace @templ/tailwindcss dev",
+    "dev:styled-components": "yarn workspace @templ/styled-components dev",
+    "dev": "concurrently \"yarn dev:linaria\" \"yarn dev:tailwindcss\" \"yarn dev:styled-components\""
+  },
+  "dependencies": {
+    "concurrently": "^7.5.0"
+  },
+  "license": "MIT"
+}
